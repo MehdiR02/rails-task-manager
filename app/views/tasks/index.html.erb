@@ -1,0 +1,12 @@
+<h1>My tasks </h1>
+<ul>
+<% @tasks.each do |task| %>
+<li>
+<%= link_to task.title, task_path(task) %>
+<a class="fa-regular fa-trash-can" data-turbo-method="delete" data-turbo-confirm="Are you sure?" href="/restaurants/6">
+</a>
+</li>
+<% end %>
+</ul>
+
+<%= link_to 'Add a new task', new_task_path %>
